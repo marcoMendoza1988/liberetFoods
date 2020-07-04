@@ -1,0 +1,12 @@
+{
+  "name": "liberetFoods",
+  "displayName": "liberetFoods",
+  "expo": {
+    "name": "liberetFoods",
+    "slug": "liberetFoods",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
