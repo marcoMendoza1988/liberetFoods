@@ -1,9 +1,11 @@
 {
   "name": "liberetFoods",
   "displayName": "liberetFoods",
+  "scheme": "myapp",
   "expo": {
     "name": "liberetFoods",
     "slug": "liberetFoods",
+    "scheme": "myapp",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
