@@ -4,13 +4,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../constants/Colors';
-//import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/HomeScreen';
 
 const BottomTab = createBottomTabNavigator();
 
 export default function BottomTabNavigator() {
-  //const colorScheme = useColorScheme();
 
   return (
     <BottomTab.Navigator
@@ -27,14 +25,10 @@ export default function BottomTabNavigator() {
   );
 }
 
-// You can explore the built-in icon families and icons on the web at:
-// https://icons.expo.fyi/
 function TabBarIcon(props) {
   return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
 }
 
-// Each tab has its own navigation stack, you can read more about this pattern here:
-// https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const TabOneStack = createStackNavigator();
 
 function TabOneNavigator() {

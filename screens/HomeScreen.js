@@ -145,7 +145,7 @@ export default class Home extends Component {
                         { cancelable: false }
                         );
                     }}>
-                        <Block row width={'100%'}>
+                        <Block row>
                         <Entypo name="location-pin" size={24} style={{color:"#F49897", paddingRight: 10}} />
                         <Text muted style={styles.tabTitle}>Select location...</Text>
                         <Feather style={{position: 'absolute',right: 10}} name="wifi" size={24} color="black" />
@@ -218,7 +218,7 @@ export default class Home extends Component {
                                 );
                             }
                             }>
-                            <Block flex card width={ '100%'} style={{positon: 'absolute', padding: 5, marginBottom: 15}}>
+                            <Block flex card style={{positon: 'absolute', padding: 5, marginBottom: 15}}>
                             {/*<Card
                                 borderless
                                 location={`$${res.idMeal}`}
