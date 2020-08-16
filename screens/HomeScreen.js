@@ -144,11 +144,6 @@ export default class Home extends Component {
                             {
                                 services.categories && services.categories.map((res, key) => (
                                 <Block row key={key} style={{marginBottom: 5, marginTop: 5}}>
-                                    <Image
-                                        style={{height: 130,width: 130}}
-                                        resizeMode="cover"
-                                        source={{ uri: res.strCategoryThumb }}
-                                    />
                                     <Button color={'transparent'} textStyle={{color:'#4D4D4D'}}  style={{ borderColor: '#4D4D4D', borderRadius: 10, marginRight: 5, height: 40 }} onPress={() => this.showModal(false, null, false, `${res.strCategory}`)} ><Text>{res.strCategory}</Text></Button>
                                 </Block>
                                 ))
@@ -212,7 +207,24 @@ export default class Home extends Component {
                             <Text><Text bold style={{color:'#FCBA3F'}}>+1 </Text>Platillos</Text>
                         </Button>
                     </Block>
-                    <Block flex style={{ position: 'relative' }}>
+                    {
+                        services.categories &&
+                        <ScrollView horizontal={true}>  
+                            {services.categories.map((res, key) => 
+                                <Block flex key={res.strCategory} style={{marginBottom: 5, marginTop: 5}}>
+                                    <TouchableWithoutFeedback onPress={()=> this.showModal(false, null, false, `${res.strCategory}`)}>
+                                        <Image
+                                            style={{height: 100, width: 100, borderRadius: 50, marginHorizontal: 5}}
+                                            resizeMode="cover"
+                                            source={{ uri: res.strCategoryThumb }}
+                                        />
+                                    </TouchableWithoutFeedback>
+                                    <Text style={{textAlign: 'center', marginHorizontal: 5}}>{res.strCategory}</Text>
+                                </Block>
+                            )}
+                        </ScrollView>
+                    }
+                    <Block flex style={{ position: 'relative', top: 20 }}>
                         <FlatList
                             data={food.meals}
                             renderItem={this.renderItem}
